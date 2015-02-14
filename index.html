@@ -13,14 +13,44 @@
 			background-size:cover;
 			background-position:top center;
 			font-family:arial, sans-serif;
-			text-align:center;
+			margin:0;
+			padding:0;
+			font-size:13px;
+		}
+		.content{
+			margin:10px;
+			padding:30px 15px;
+			background-color:rgba(255,255,255,0.75);
+			width:300px;
+			color:#333333;
+		}
+		a{
+			color:#666;
+		}
+		h1{margin:0;}
+		article{
+			margin:30px 0;
+		}
+		footer{
+			font-size:10px;
 		}
 	</style>
 	<body>
-		<h1>Welcome to my site</h1>
-		<p>that is <a href="https://www.youtube.com/watch?v=5KGah8bW8GE" target="_blank">100% responsive</a> and works on all <a href="http://en.wikipedia.org/wiki/List_of_web_browsers" target="_blank">browsers</a>, devices and <a href="http://en.wikipedia.org/wiki/List_of_operating_systems" target="_blank">operating sistems</a>.</p>
-		<p>Want to help my dog Ollie to stay healthy and happy? Emailing me work I can do for you is fine by me.</p>
-		<p>My name is <a href="mailto:david.r.s.lopes@gmail.com" target="_blank">David Lopes</a> and I'm a webdeveloper.</p>
-		<p><small>&copy; David Lopes 2015 - made with ♥ and open source tools - <a href="http://www.sublimetext.com/" target="_blank">Sublime Text 3</a>, <a href="https://github.com/davidrslopes/aboutme" target="_blank">github</a> dploy.io. Powered by <a href="http://ptisp.pt" target="_blank">ptisp</a></small></p>
+		<div class="content">
+			<header>
+				<h1>Welcome!</h1>
+			</header>
+			<article>
+				<p>This site is <a href="https://www.youtube.com/watch?v=5KGah8bW8GE" target="_blank">100% responsive</a> and works on all <a href="http://en.wikipedia.org/wiki/List_of_web_browsers" target="_blank">browsers</a>, devices and <a href="http://en.wikipedia.org/wiki/List_of_operating_systems" target="_blank">operating sistems</a>.</p>
+				<p>Want to help my dog Ollie to stay healthy and happy?</p>
+				<p>Emailing me work I can do for you is fine by me.</p>
+				<p>My name is <a href="mailto:david.r.s.lopes@gmail.com" target="_blank">David Lopes</a> and I'm a webdeveloper.</p>
+			</article>
+			<footer>
+				<p>&copy;2015 David RS Lopes</p>
+				<p>made with ♥ and open source tools - <a href="http://www.sublimetext.com/" target="_blank">sublime3</a>, <a href="https://github.com/davidrslopes/aboutme" target="_blank">github</a> <a href="http://dploy.io" target="_blank">dploy.io</p>
+				<p>Powered by <a href="http://ptisp.pt" target="_blank">ptisp</a> @ <a href="http://en.wikipedia.org/wiki/Portugal" target="_blank">Portugal</a>.</p>
+			</footer>
+		</div>
 	</body>
 </html>
