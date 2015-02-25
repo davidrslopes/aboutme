@@ -1,0 +1,54 @@
+/**
+* #0# INDEX & NOTES
+*
+* This is a project made by me, for me to learn more and for you to learn more about me.
+*
+* My name is David Lopes and I'm a webdeveloper.
+*
+*
+* #1# LESS VARIABLES
+*
+* Less variables to use on this project
+*/
+/**
+* #2# BASIC ELEMENTS
+*
+* Styles for basic elements, such as body, header and footer
+*/
+body {
+  background-image: url('../img/bg_ollie.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: top center;
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+body a {
+  color: #666666;
+}
+body h1 {
+  margin: 0;
+}
+body article {
+  margin: 30px 0;
+}
+body footer {
+  font-size: 10px;
+}
+/**
+* #3# CLASSES
+*
+* Styles for classed elements.
+*/
+.content {
+  margin: 10px;
+  padding: 30px 15px;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 300px;
+  color: #333333;
+}
