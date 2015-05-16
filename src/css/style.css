@@ -134,14 +134,14 @@ a img {
 * Styles for basic elements, such as body, header and footer
 */
 body {
-  background-image: url('../img/bg_ollie.jpg');
+  background-image: url(../img/bg_ollie.jpg);
+  background-position: center center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-attachment: fixed;
   background-size: cover;
-  background-position: top center;
+  background-color: #EAEAEA;
   color: #333333;
+  height: 100%;
 }
 body a {
   color: #666666;
@@ -162,11 +162,67 @@ body footer {
 */
 .container {
   background-color: rgba(255, 255, 255, 0.75);
-  width: 33%;
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 20px;
 }
-.hide {
-  visibility: hidden;
-  display: none;
+/**
+* #99# MEDIA QUERIES
+*
+* Cutting Edge Device Targeting with CSS3 Media Queries - http://www.htmlgoodies.com/html5/css/cutting-edge-device-targeting-with-css3-media-queries.html#fbid=pniw00U88Xx
+*/
+/* Smartphones (portrait and landscape) --  --  --  --  -- - */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  .container {
+    width: 80%;
+  }
+}
+/* Smartphones (landscape) --  --  --  --  -- - */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+  .container {
+    width: 80%;
+  }
+}
+/* Smartphones (portrait) --  --  --  --  -- - */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+  .container {
+    width: 80%;
+  }
+}
+/* iPads (portrait and landscape) --  --  --  --  -- - */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+  .container {
+    width: 30%;
+  }
+}
+/* iPads (landscape) --  --  --  --  -- - */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+  .container {
+    width: 30%;
+  }
+}
+/* iPads (portrait) --  --  --  --  -- - */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+  .container {
+    width: 55%;
+  }
+}
+/* Desktops and laptops --  --  --  --  -- - */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .container {
+    width: 30%;
+  }
+}
+/* Large screens --  --  --  --  -- - */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+  .container {
+    width: 30%;
+  }
 }
