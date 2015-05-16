@@ -14,7 +14,61 @@
 @drsl-dark : #333;
 
 /**
-* #2# BASIC ELEMENTS
+* #2# RESET
+*
+* Reset Less - https://gist.github.com/joshuapowell/1680540
+*/
+
+html, body {
+	border: 0;
+	font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+div, span, object, iframe, img, table, caption, thead, tbody,
+tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
+nav, footer, header, section, summary, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  caption, th, td {
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
+a img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+/**
+* #3# BASIC ELEMENTS
 *
 * Styles for basic elements, such as body, header and footer
 */
@@ -27,21 +81,20 @@ body{
 	-o-background-size:cover;
 	background-size:cover;
 	background-position:top center;
-	font-family:arial, sans-serif;
-	margin:0;
-	padding:0;
-	font-size:13px;
+	color:@drsl-dark;
 	a{
 		color:@drsl-light;
 	}
-	h1{
-		margin:0;
+	header{
+		h1{
+			font-size: 150%;
+		}
 	}
 	article{
-		margin:30px 0;
+		padding: 20px 0;
 	}
 	footer{
-		font-size:10px;
+		font-size: 66%;
 	}
 }
 
@@ -51,10 +104,13 @@ body{
 * Styles for classed elements.
 */
 
-.content{
-	margin:10px;
-	padding:30px 15px;
+.container{
 	background-color:fade(white, 75%);
-	width:300px;
-	color:@drsl-dark;
+	width:33%;
+	margin: 0 auto;
+	padding: 20px;
+}
+.hide{
+	visibility: hidden;
+	display: none;
 }

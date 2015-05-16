@@ -63,11 +63,17 @@ module.exports = function(grunt) {
 			},
 			cssfiles: {
 				files: ['src/css/*.css'],
-				tasks: ['cssmin']
+				tasks: ['cssmin'],
+				options : {
+					livereload : true
+				}
 			},
 			jsfiles: {
 				files: ['src/js/*.js'],
-				tasks: ['uglify']
+				tasks: ['uglify'],
+				options : {
+					livereload : true
+				}
 			},
 			images: {
 				files: ['src/img/**/*.{png,jpg,gif,svg}'],
