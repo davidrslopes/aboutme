@@ -3,7 +3,25 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		/***************************************************************************
-		 * Images
+		* DEPENDECIES
+		***************************************************************************/
+		// Copy Bower dependencies
+		bowercopy: {
+			options: {
+				srcPrefix: "bower_components",
+				runBower: true,
+			},
+			jquerydist: {
+				src: "jquery/dist",
+				dest: "src/vendor/jquery",
+			},
+			twbsdist: {
+				src: "bootstrap/dist",
+				dest: "src/vendor/bootstrap",
+			},
+		},
+		/***************************************************************************
+		 * IMAGES
 		 ***************************************************************************/
 		imagemin: {
 			dynamic: {
@@ -29,18 +47,40 @@ module.exports = function(grunt) {
 			}
 		}, //less
 
-		// Minify CSS
+		// Minify & concat CSS
 		cssmin: {
-			target: {
-				files: [{
-					expand: true,
-					cwd: 'src/css',
-					src: ['*.css', '!*.min.css'],
-					dest: 'assets/css',
-					ext: '.min.css'
-				}]
+			options: {
+				keepSpecialComments: 0,
+			},
+			combine: {
+				files: {
+					'assets/css/style.min.css': [
+						'src/vendor/bootstrap/css/bootstrap.css',
+						'src/css/style.css',
+					]
+				},
 			}
+		}, // cssmin
+
+		/***************************************************************************
+		 * CONCAT JS
+		 ***************************************************************************/
+
+		concat: {
+			options: {
+				stripBanners: true,
+			},
+			jsfiles: {
+				src: [
+					'src/vendor/jquery/jquery.js',
+					'src/vendor/bootstrap/js/bootstrap.js',
+					'src/js/script.js',
+				],
+				dest: 'src/js/app.js',
+				nonull: true,
+			},
 		},
+
 		/***************************************************************************
 		 * MINIFY JS
 		 ***************************************************************************/
@@ -48,13 +88,14 @@ module.exports = function(grunt) {
 		uglify: {
 			jsfiles: {
 				files: {
-					'assets/js/script.min.js': ['src/js/script.js']
+					'assets/js/app.min.js': ['src/js/app.js']
 				}
 			}
-		}, // uglify
+		},
+
 		/***************************************************************************
-         * Watch
-         ***************************************************************************/
+		 * WATCH
+		 ***************************************************************************/
 
 		watch: {
 			lessfiles: {
@@ -70,24 +111,35 @@ module.exports = function(grunt) {
 			},
 			jsfiles: {
 				files: ['src/js/*.js'],
-				tasks: ['uglify'],
+				tasks: ['concat', 'uglify'],
 				options : {
 					livereload : true
 				}
 			},
 			images: {
 				files: ['src/img/**/*.{png,jpg,gif,svg}'],
-				tasks: ['imagemin']
-			}
+				tasks: ['imagemin'],
+				options : {
+					livereload : true
+				}
+			},
+			index:{
+				files: ['index.html'],
+				options : {
+					livereload : true
+				}
+			},
 		} // watch
 	}); // grunt.initConfig
 
 	// Load necessary plugins
+	grunt.loadNpmTasks("grunt-bowercopy");
 	grunt.loadNpmTasks("grunt-contrib-imagemin");
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
+	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-
-	grunt.registerTask("default", ["less", "cssmin", "uglify", "imagemin", "watch"]);
+	grunt.registerTask("default", ["bowercopy", "less", "cssmin", "concat", "uglify", "imagemin", "watch"]);
 };

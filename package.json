@@ -1,34 +1,38 @@
 {
-  "name": "aboutme",
-  "version": "1.0.0",
-  "description": "Portfolio and About page of David RS Lopes",
-  "main": "index.js",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-imagemin": "^0.9.3",
-    "grunt-contrib-less": "^1.0.0",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/davidrslopes/aboutme.git"
-  },
-  "keywords": [
-    "portfolio",
-    "about",
-    "aboutme",
-    "davidrslopes",
-    "davidlopes"
-  ],
-  "author": "David RS Lopes",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/davidrslopes/aboutme/issues"
-  },
-  "homepage": "https://github.com/davidrslopes/aboutme"
+	"name": "aboutme",
+	"version": "1.0.0",
+	"description": "Portfolio and About page of David RS Lopes",
+	"main": "index.html",
+	"devDependencies": {
+		"bower": "^1.4.1",
+		"grunt": "^0.4.5",
+		"grunt-bowercopy": "^1.2.0",
+		"grunt-contrib-concat": "^0.5.1",
+		"grunt-contrib-cssmin": "^0.10.0",
+		"grunt-contrib-imagemin": "^0.9.3",
+		"grunt-contrib-less": "^1.0.0",
+		"grunt-contrib-uglify": "^0.6.0",
+		"grunt-contrib-watch": "^0.6.1",
+		"grunt-wiredep": "^2.0.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/davidrslopes/aboutme.git"
+	},
+	"keywords": [
+		"portfolio",
+		"about",
+		"aboutme",
+		"davidrslopes",
+		"davidlopes"
+	],
+	"author": "David RS Lopes",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/davidrslopes/aboutme/issues"
+	},
+	"homepage": "https://github.com/davidrslopes/aboutme"
 }

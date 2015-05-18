@@ -1,0 +1,20 @@
+{
+	"name": "aboutme",
+	"version": "1.0.0",
+	"authors": [
+		"David RS Lopes <davidrslopes@gmail.com>"
+	],
+	"description": "Portfolio and About page of David RS Lopes",
+	"private": false,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "",
+		"bootstrap": ""
+	}
+}
