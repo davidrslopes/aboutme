@@ -5,9 +5,9 @@ function Preload(arrayOfImages) {
 }
 function Background(){
 	var imgs = [
-			"/assets/img/bg_ollie_2.jpg",
-			"/assets/img/bg_ollie_3.jpg",
-			"/assets/img/bg_ollie_1.jpg"
+			"../assets/img/bg_ollie_2.jpg",
+			"../assets/img/bg_ollie_3.jpg",
+			"../assets/img/bg_ollie_1.jpg"
 		],
 		len = imgs.length,
 		idx = -1;
