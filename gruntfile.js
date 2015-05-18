@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 			combine: {
 				files: {
 					'assets/css/style.min.css': [
-						'src/vendor/bootstrap/css/bootstrap.css',
+						//'src/vendor/bootstrap/css/bootstrap.css',
 						'src/css/style.css',
 					]
 				},
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 			jsfiles: {
 				src: [
 					'src/vendor/jquery/jquery.js',
-					'src/vendor/bootstrap/js/bootstrap.js',
+					//'src/vendor/bootstrap/js/bootstrap.js',
 					'src/js/script.js',
 				],
 				dest: 'src/js/app.js',
@@ -98,6 +98,12 @@ module.exports = function(grunt) {
 		 ***************************************************************************/
 
 		watch: {
+			options : {
+				livereload : true
+			},
+			index:{
+				files: ['index.html'],
+			},
 			lessfiles: {
 				files: ['*.less', '**/*.less'],
 				tasks: ['less']
@@ -105,29 +111,14 @@ module.exports = function(grunt) {
 			cssfiles: {
 				files: ['src/css/*.css'],
 				tasks: ['cssmin'],
-				options : {
-					livereload : true
-				}
 			},
 			jsfiles: {
 				files: ['src/js/*.js'],
 				tasks: ['concat', 'uglify'],
-				options : {
-					livereload : true
-				}
 			},
 			images: {
 				files: ['src/img/**/*.{png,jpg,gif,svg}'],
 				tasks: ['imagemin'],
-				options : {
-					livereload : true
-				}
-			},
-			index:{
-				files: ['index.html'],
-				options : {
-					livereload : true
-				}
 			},
 		} // watch
 	}); // grunt.initConfig

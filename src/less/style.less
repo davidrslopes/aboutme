@@ -14,7 +14,36 @@
 @drsl-dark : #333;
 
 /**
-* #2# RESET
+* #2# MIXINS
+*
+* Useful CSS3 LESS Mixins - https://css-tricks.com/snippets/css/useful-css3-less-mixins/
+*/
+
+.transition (@transition) {
+	-webkit-transition:			@transition;
+	-moz-transition:			@transition;
+	-ms-transition:				@transition;
+	-o-transition:				@transition;
+}
+
+.box-shadow (@string) {
+	-webkit-box-shadow:			@string;
+	-moz-box-shadow:			@string;
+	box-shadow:					@string;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius:		@radius;
+	-moz-border-radius:			@radius;
+	border-radius:				@radius;
+
+	-moz-background-clip:		padding;
+	-webkit-background-clip:	padding-box;
+	background-clip:			padding-box;
+}
+
+/**
+* #3# RESET
 *
 * Reset Less - https://gist.github.com/joshuapowell/1680540
 */
@@ -30,19 +59,19 @@ html, body {
 div, span, object, iframe, img, table, caption, thead, tbody,
 tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
 nav, footer, header, section, summary, mark, audio, video {
-  border: 0;
-  margin: 0;
-  padding: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
 del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
 ol, ul, li, fieldset, legend, label {
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  margin: 0;
-  padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
 }
 
 article, aside, canvas, figure, figure img, figcaption, hgroup,
@@ -51,20 +80,20 @@ footer, header, nav, section, audio, video {
 }
 
 table {
-  border-collapse: separate;
-  border-spacing: 0;
-  caption, th, td {
-    text-align: left;
-    vertical-align: middle;
-  }
+	border-collapse: separate;
+	border-spacing: 0;
+	caption, th, td {
+		text-align: left;
+		vertical-align: middle;
+	}
 }
 
 a img {
-  border: 0;
+	border: 0;
 }
 
 :focus {
-  outline: 0;
+	outline: 0;
 }
 
 /**
@@ -74,6 +103,7 @@ a img {
 */
 
 body{
+	.transition(background-image 1s ease-out);
 	background-image: url(../img/bg_ollie_1.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -88,11 +118,26 @@ body{
 
 	header{
 		h1{
-			font-size: 150%;
+			font-size: 300%;
+			text-shadow: 1px 1px fade(white, 75%), -1px -1px #444;
+			text-align: center;
+			color:@drsl-dark;
+			&:before,&:after{
+				content: attr(title);
+				color: rgba(255,255,255,.1);
+				position: absolute;
+			}
+			&:before{
+				top: 1px;
+				left: 1px;
+			}
+			&:after  {
+				top: 2px;
+				left: 2px
+			}
 		}
 	}
 	article{
-		padding: 20px 0;
 		p{
 			margin-bottom: 10px;
 		}
@@ -109,6 +154,8 @@ body{
 */
 
 .container{
+	.border-radius;
+	.box-shadow(0px 5px 10px rgba(0,0,0,0.33));
 	background-color:fade(white, 75%);
 	margin: 20px auto;
 	padding: 20px;

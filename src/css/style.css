@@ -11,7 +11,12 @@
 * Less variables to use on this project
 */
 /**
-* #2# RESET
+* #2# MIXINS
+*
+* Useful CSS3 LESS Mixins - https://css-tricks.com/snippets/css/useful-css3-less-mixins/
+*/
+/**
+* #3# RESET
 *
 * Reset Less - https://gist.github.com/joshuapowell/1680540
 */
@@ -134,6 +139,10 @@ a img {
 * Styles for basic elements, such as body, header and footer
 */
 body {
+  -webkit-transition: background-image 1s ease-out;
+  -moz-transition: background-image 1s ease-out;
+  -ms-transition: background-image 1s ease-out;
+  -o-transition: background-image 1s ease-out;
   background-image: url(../img/bg_ollie_1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -147,10 +156,24 @@ body a {
   color: #666666;
 }
 body header h1 {
-  font-size: 150%;
+  font-size: 300%;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.75), -1px -1px #444444;
+  text-align: center;
+  color: #333333;
 }
-body article {
-  padding: 20px 0;
+body header h1:before,
+body header h1:after {
+  content: attr(title);
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+}
+body header h1:before {
+  top: 1px;
+  left: 1px;
+}
+body header h1:after {
+  top: 2px;
+  left: 2px;
 }
 body article p {
   margin-bottom: 10px;
@@ -164,6 +187,15 @@ body footer {
 * Styles for classed elements.
 */
 .container {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.33);
   background-color: rgba(255, 255, 255, 0.75);
   margin: 20px auto;
   padding: 20px;
