@@ -1,19 +1,19 @@
 {
 	"name": "aboutme",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Portfolio and About page of David RS Lopes",
 	"main": "index.html",
 	"devDependencies": {
-		"bower": "^1.4.1",
-		"grunt": "^0.4.5",
-		"grunt-bowercopy": "^1.2.0",
-		"grunt-contrib-concat": "^0.5.1",
-		"grunt-contrib-cssmin": "^0.10.0",
-		"grunt-contrib-imagemin": "^0.9.3",
-		"grunt-contrib-less": "^1.0.0",
-		"grunt-contrib-uglify": "^0.6.0",
-		"grunt-contrib-watch": "^0.6.1",
-		"grunt-wiredep": "^2.0.0"
+		"bower": "^1.8.2",
+		"grunt": "^1.0.1",
+		"grunt-bowercopy": "^1.2.4",
+		"grunt-contrib-concat": "^1.0.1",
+		"grunt-contrib-cssmin": "^2.2.1",
+		"grunt-contrib-imagemin": "^2.0.1",
+		"grunt-contrib-less": "^1.4.1",
+		"grunt-contrib-uglify": "^3.1.0",
+		"grunt-contrib-watch": "^1.0.0",
+		"grunt-wiredep": "^3.0.1"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"

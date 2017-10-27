@@ -149,17 +149,17 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-color: #EAEAEA;
-  color: #333333;
+  color: #333;
   height: 100%;
 }
 body a {
-  color: #666666;
+  color: #666;
 }
 body header h1 {
-  font-size: 300%;
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.75), -1px -1px #444444;
+  font-size: 250%;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.75), -1px -1px #444;
   text-align: center;
-  color: #333333;
+  color: #333;
 }
 body header h1:before,
 body header h1:after {
@@ -177,6 +177,7 @@ body header h1:after {
 }
 body article p {
   margin-bottom: 10px;
+  font-size: 85%;
 }
 body footer {
   font-size: 66%;
@@ -199,6 +200,43 @@ body footer {
   background-color: rgba(255, 255, 255, 0.75);
   margin: 20px auto;
   padding: 20px;
+}
+.new {
+  background-color: rgba(255, 255, 255, 0.33);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.33)), to(rgba(255, 255, 255, 0.66)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.66));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.66));
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.66));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.66));
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: #333 2px solid;
+  padding: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+.new a,
+.new b {
+  color: #333;
+}
+.new b {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 8px;
+  border-right: #333 2px solid;
+  font-size: 100%;
+}
+.new p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 8px;
+  font-size: 80%;
 }
 /**
 * #99# MEDIA QUERIES
