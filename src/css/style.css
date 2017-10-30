@@ -238,6 +238,9 @@ body footer {
   padding-left: 8px;
   font-size: 80%;
 }
+.text-right {
+  text-align: right;
+}
 /**
 * #99# MEDIA QUERIES
 *
