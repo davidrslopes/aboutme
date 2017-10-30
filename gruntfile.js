@@ -15,9 +15,9 @@ module.exports = function(grunt) {
 				src: "jquery/dist",
 				dest: "src/vendor/jquery",
 			},
-			twbsdist: {
-				src: "bootstrap/dist",
-				dest: "src/vendor/bootstrap",
+			backstretch: {
+				src: "backstretch",
+				dest: "src/vendor/backstretch",
 			},
 		},
 		/***************************************************************************
@@ -55,7 +55,6 @@ module.exports = function(grunt) {
 			combine: {
 				files: {
 					'assets/css/style.min.css': [
-						//'src/vendor/bootstrap/css/bootstrap.css',
 						'src/css/style.css',
 					]
 				},
@@ -73,7 +72,7 @@ module.exports = function(grunt) {
 			jsfiles: {
 				src: [
 					'src/vendor/jquery/jquery.js',
-					//'src/vendor/bootstrap/js/bootstrap.js',
+					'src/vendor/backstretch/jquery.backstretch.js',
 					'src/js/script.js',
 				],
 				dest: 'src/js/app.js',

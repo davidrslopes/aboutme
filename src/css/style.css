@@ -138,19 +138,15 @@ a img {
 *
 * Styles for basic elements, such as body, header and footer
 */
-body {
-  -webkit-transition: background-image 1s ease-out;
-  -moz-transition: background-image 1s ease-out;
-  -ms-transition: background-image 1s ease-out;
-  -o-transition: background-image 1s ease-out;
-  background-image: url(../img/bg_ollie_1.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+html {
+  background: url(../img/bg_ollie_1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-color: #EAEAEA;
+}
+body {
   color: #333;
-  height: 100%;
 }
 body a {
   color: #666;

@@ -14,8 +14,8 @@ function Background(){
 	Preload(imgs);
 	setInterval(function(){
 		idx = (idx+1)%len;
-		$('body').css('background-image', 'url(' + imgs[idx] + ')');
-	}, 10000);
+		$.backstretch(imgs[idx], {speed: 500});
+	}, 5000);
 }
 jQuery.fn.center = function () {
 	this.css("position","absolute");
@@ -25,7 +25,6 @@ jQuery.fn.center = function () {
 }
 $(function() {
 	$('.container').center();
-
 	$(window).resize(function(){
 		$('.container').center();
 	});
